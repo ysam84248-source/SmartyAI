@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Orders</title></head>
+<body>
+  <h2>Orders Dashboard</h2>
+  <form method="POST">
+    <input name="product" placeholder="Product"><br>
+    <input name="name" placeholder="Name"><br>
+    <input name="address" placeholder="Address"><br>
+    <input name="payment" placeholder="Payment"><br>
+    <button type="submit">Add Order</button>
+  </form>
+  <h3>Order List</h3>
+  <ul>
+    {% for order in orders %}
+      <li>{{ order.name }} - {{ order.product }} ({{ order.status }})</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
