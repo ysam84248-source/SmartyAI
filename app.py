@@ -44,6 +44,6 @@ def orders():
     return render_template('orders.html', orders=orders)
 
 if __name__ == '__main__':
-    print("🚀 Starting SmartyAI Dashboard...")
+    print("👉 Starting SmartyAI Flask Server...")
     app.run(host='0.0.0.0', port=5000)
     

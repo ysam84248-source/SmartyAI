@@ -2,6 +2,11 @@ services:
   - type: web
     name: smartyai
     env: python
-    buildCommand: pip install -r requirements.txt
+    buildCommand: ""
     startCommand: python app.py
+    repo: https://github.com/ysam84248-source/SmartyAI
+    branch: main
     plan: free
+    envVars:
+      - key: FLASK_ENV
+        value: production
