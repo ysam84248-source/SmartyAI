@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect, jsonify
 import json
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 ORDERS_FILE = 'orders.json'
 
 def load_orders():
